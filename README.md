@@ -17,3 +17,11 @@ If you are developing a production application, we recommend using TypeScript wi
 
 - setup is compledted
 - Vite + React + ReactOM + Formik(for forms) + yup(for validations)
+
+# Forms
+
+-if you want to use yup library do not forget to add import \* as Yup from 'yup'; in your forms.
+
+# Routing
+
+- installed routing in my project

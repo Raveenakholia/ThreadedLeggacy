@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 const ContactUs = () => {
   const initialValues = { email: '', name: '', phoneNumber: '' };
   const ValidationSchema = Yup.object({
@@ -13,7 +14,30 @@ const ContactUs = () => {
   const onSubmit = (values) => {
     console.log(values);
   };
-  return <div>ContactUs</div>;
+  return (
+    <Formik
+      initialValues={initialValues}
+      validationSchema={ValidationSchema}
+      onSubmit={onSubmit}>
+      <Form>
+        <div>
+          <label htmlFor='email'>Email</label>
+          <Field
+            type='email'
+            id='email'
+            name='email'
+            className='border border-gray-300 p-2 rounded w-full'
+          />
+          <ErrorMessage
+            name='email'
+            component='div'
+            className='text-red-500'
+          />
+        </div>
+        <button type='submit' />
+      </Form>
+    </Formik>
+  );
 };
 
 export default ContactUs;

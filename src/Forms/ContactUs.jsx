@@ -21,6 +21,30 @@ const ContactUs = () => {
       onSubmit={onSubmit}>
       <Form>
         <div>
+          <label htmlFor='name'>Name</label>
+          <Field
+            type='text'
+            id='name'
+            name='name'
+            className='border border-gray-300 p-2 rounded w-full'
+          />
+          <ErrorMessage
+            name='name'
+            component='div'
+            className='text-red-500'
+          />
+          <label htmlFor='phoneNumber'>Phone Number</label>
+          <Field
+            type='text'
+            id='phoneNumber'
+            name='phoneNumber'
+            className='border border-gray-300 p-2 rounded w-full'
+          />
+          <ErrorMessage
+            name='phoneNumber'
+            component='div'
+            className='text-red-500'
+          />
           <label htmlFor='email'>Email</label>
           <Field
             type='email'
